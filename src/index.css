@@ -1,0 +1,18 @@
+.task__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 5px;
+  box-shadow:  1px 1px gray;
+
+}
+.task__board{
+  width: 33.33%;
+  min-height: 400px;
+  border:2px rgb(161, 180, 172) solid;
+  
+  box-shadow:  5px 10px rgb(206, 166, 5);
+  padding: 10px;
+  margin-top: 50px;
+}
