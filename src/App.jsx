@@ -103,7 +103,7 @@ function App() {
       <h1  className='pb-3 main__head'>Task Manager</h1>
       <input value={inpValue} onKeyDown={(e)=>handleAddTask(e)} onChange={(e)=>setInpValue(e.target.value)} type="text" name="" id="" placeholder='Add task' className='form-control w-50 mx-auto' />
 
-      <div className="boards d-flex justify-content-center gap-5">
+      <div className="boards d-flex flex-wrap justify-content-center gap-5">
         <div data-status={TODO}  className="task__board todo" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>handleDrop(e)}>
           <h3 className='task__head'>TODO</h3>
           <hr />
