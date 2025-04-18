@@ -10,8 +10,8 @@
 .task__board{
   width: 33.33%;
   min-height: 400px;
-  border:2px rgb(161, 180, 172) solid;
-  
+  border:1px rgb(214, 214, 214) solid;
+  border-radius: 20px;
   box-shadow:  5px 10px rgb(206, 166, 5);
   padding: 10px;
   margin-top: 50px;
