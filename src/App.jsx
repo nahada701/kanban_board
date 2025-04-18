@@ -100,12 +100,13 @@ function App() {
   return (
     <>
     <div className='container text-center mx-auto py-5'>
-      <h1  className='pb-3'>Task Manager</h1>
+      <h1  className='pb-3 main__head'>Task Manager</h1>
       <input value={inpValue} onKeyDown={(e)=>handleAddTask(e)} onChange={(e)=>setInpValue(e.target.value)} type="text" name="" id="" placeholder='Add task' className='form-control w-50 mx-auto' />
 
       <div className="boards d-flex justify-content-center gap-5">
-        <div data-status={TODO}  className="task__board" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>handleDrop(e)}>
+        <div data-status={TODO}  className="task__board todo" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>handleDrop(e)}>
           <h3 className='task__head'>TODO</h3>
+          <hr />
           <div className='task__container'>
           { 
            tasks?.length>0&& 
@@ -116,10 +117,10 @@ function App() {
                { tsk?.title}
               </span>
               <div className="buttons">
-                <button className='btn' onClick={()=>handleUpdate(tsk)}>✏️
+                <button className='btn' onClick={()=>handleUpdate(tsk)}><i class="fa-solid fa-pen"></i>
                   </button>
                   <button  onClick={()=>handleDelete(tsk)} className=' btn'>
-                    🗑️
+                  <i class="fa-solid fa-trash-can text-danger"></i>
                   </button>
               </div>
             </div>
@@ -127,8 +128,9 @@ function App() {
             }
           </div>
         </div>
-        <div data-status={DOING} className="task__board" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>handleDrop(e)}>
+        <div data-status={DOING} className="task__board doing" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>handleDrop(e)}>
         <h3 className='task__head'>DOING</h3>
+        <hr />
         <div className='task__container'>
            { 
            tasks?.length>0&& 
@@ -139,10 +141,10 @@ function App() {
               { tsk?.title}
               </span>
               <div className="buttons">
-                <button onClick={()=>handleUpdate(tsk)} className='btn'>✏️
+                <button onClick={()=>handleUpdate(tsk)} className='btn'><i class="fa-solid fa-pen"></i>
                   </button>
                   <button onClick={()=>handleDelete(tsk)}  className='btn'>
-                    🗑️
+                  <i class="fa-solid fa-trash-can text-danger"></i>
                   </button>
               </div>
             </div>
@@ -150,8 +152,9 @@ function App() {
             }
           </div>
         </div>
-        <div data-status={DONE} className="task__board" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>handleDrop(e)}>
+        <div data-status={DONE} className="task__board done" onDragOver={(e)=>e.preventDefault()} onDrop={(e)=>handleDrop(e)}>
         <h3 className='task__head'>DONE</h3>
+        <hr />
         <div className='task__container'>
           { 
            tasks?.length>0&& 
@@ -162,10 +165,10 @@ function App() {
                { tsk?.title}
               </span>
               <div className="buttons">
-                <button onClick={()=>handleUpdate(tsk)} className='btn'>✏️
+                <button onClick={()=>handleUpdate(tsk)} className='btn'><i class="fa-solid fa-pen"></i>
                   </button>
                   <button onClick={()=>handleDelete(tsk)} className=' btn'>
-                    🗑️
+                  <i class="fa-solid fa-trash-can text-danger"></i>
                   </button>
               </div>
             </div>

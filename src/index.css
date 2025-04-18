@@ -1,3 +1,15 @@
+body{
+  background: RGB(64, 64, 142);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(64, 64, 142, 1) 0%, rgba(0, 0, 0, 1) 73%, rgba(0, 0, 0, 1) 100%);
+}
+.main__head{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(110, 174, 8);
+}
 .task__item{
   display: flex;
   align-items: center;
@@ -10,9 +22,27 @@
 .task__board{
   width: 33.33%;
   min-height: 400px;
+  background-color: white;
   border:1px rgb(214, 214, 214) solid;
   border-radius: 20px;
-  box-shadow:  5px 10px rgb(206, 166, 5);
   padding: 10px;
   margin-top: 50px;
 }
+.todo{
+  color:  rgb(135, 35, 15);
+  box-shadow:  5px 10px rgb(135, 35, 15);
+
+}
+.doing{
+  color:  rgb(206, 166, 5);
+
+  box-shadow:  5px 10px rgb(206, 166, 5);
+
+}
+
+.done{
+  color: rgb(7, 128, 1);
+  box-shadow:  5px 10px rgb(7, 128, 1);
+
+}
+
